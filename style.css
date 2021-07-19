@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    overflow: hidden; /*to avoid scrollbar*/
+}
+
+.gameContainer{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.mike{
+    background-image: url(Mike.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 201px;
+    width: 170px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+}
+
+.obstacle{
+    background-image: url(Wazo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 187px;
+    height: 232px;
+    position: absolute;
+    bottom: 0;
+    left: 45vw;
+
+}
+/*for mike*/
+.animateMike{
+    animation: mike 0.6s linear;
+}
+
+/*for wazo obstacle*/
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+.gameOver{
+    position: relative;
+    top:15%;
+    font-size: 55px;
+    text-align: center; 
+    font-family: 'comic sans';
+    color: rgb(255, 0, 179);
+    background-color: rgb(43, 4, 51);
+    margin:auto;
+    width: 70%;
+}
+#scoreCont{
+    font-size: 25px;
+    color: #95ee8d;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+}
+@keyframes mike{
+
+    0%{
+        bottom:  0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0;
+        left: px;
+    }
+}
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
